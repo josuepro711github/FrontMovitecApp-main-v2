@@ -143,6 +143,7 @@ export class AdminUsuariosComponent implements OnInit {
     this.modalDetalleActive = true;
     this.instalacionesService.getAllByClienteId(this.usuarios[index].id).subscribe(data=>{
       this.instalaciones = data;
+      console.log(this.instalaciones)
     });
   }
 

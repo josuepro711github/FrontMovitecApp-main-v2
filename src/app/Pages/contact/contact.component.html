@@ -3,7 +3,7 @@
   <section class="form-container">
     <h1>Contacta con nuestro equipo para tus dudas o necesidades</h1>
     <div class="form">
-      <form action="" (submit)="onSubmit()" #formContact="ngForm">
+      <form (submit)="onSubmit()" #formContact="ngForm">
         <input name="nombre" #nombre="ngModel"
                class="form-item"
                type="text"
@@ -11,7 +11,6 @@
                [(ngModel)]="contacto.nombre"
                pattern="^[a-zA-Z]{3,30}(\s[a-zA-Z]{3,30}){0,2}$">
                <p *ngIf="nombre.invalid">Sin tildes, ni muy corto, por favor.</p>
-<!--\u00f1\u00d1  estos son para ñ y Ñ-->
         <input name="apellidos" #apellidos="ngModel"
                class="form-item"
                type="text"
@@ -46,6 +45,7 @@
         <input name="phone" #phone="ngModel"
                class="form-item"
                type="text"
+               required
                placeholder="Tel&eacute;fono o celular"
                [(ngModel)]="contacto.telefono"
                pattern="^[0-9]{9,15}$">
@@ -64,9 +64,14 @@
                                   id="check"
                                   [(ngModel)]="flagDataPersonal">He leído y aceptado las <a href="#">Condiciones del Tratamiento de Datos Personales</a></label>
 
+
+        <ngx-recaptcha2 class="mb-3" #captchaElem
+          formControlName="recaptcha"
+          [siteKey]="siteKey">    
+        </ngx-recaptcha2> 
+
         <button type="submit"
-                [disabled]="formContact.invalid || !flagDataPersonal"
-                [ngStyle]="formContact.invalid || !flagDataPersonal ? {'background':'#45a8ee', 'cursor':'default', 'color':'#555'}:{}">ENVIAR</button>
+                [disabled]="formContact.invalid || !flagDataPersonal || !captchaElem">ENVIAR</button>
       </form>
     </div>
     <div class="respuesta-contacto" [ngClass]="{'respuesta-check':flagCheck&&flagRespuesta,'respuesta-exis':!flagCheck&&flagRespuesta}">
@@ -81,6 +86,7 @@
     </div>
   </section>
 
+  
 
   <section class="info-container">
     <article class="info1">

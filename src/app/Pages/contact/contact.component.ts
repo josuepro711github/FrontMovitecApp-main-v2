@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PostContactDTO } from '../../Models/contact.model';
 import { ContactoService } from 'src/app/Services/contacto.service';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { ReCaptchaV3Service } from 'ngx-captcha';
 
 @Component({
   selector: 'app-contact',
@@ -8,7 +10,7 @@ import { ContactoService } from 'src/app/Services/contacto.service';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-
+  siteKey: string = "6LfFCdsgAAAAABIOTCS94LPa0_H8OuGf4QvJnzGc";
   contacto : PostContactDTO = {
     nombre : "",
     apellidos : "",
@@ -29,6 +31,7 @@ export class ContactComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
   }
 
   onSubmit(){

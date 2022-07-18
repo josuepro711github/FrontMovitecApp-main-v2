@@ -1,0 +1,12 @@
+.t_font th{
+    font-size: 1.1rem;
+}
+
+.t_font td{
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.t_font .id{
+    padding-left: 20px;
+}

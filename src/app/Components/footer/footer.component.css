@@ -8,8 +8,7 @@
 footer{
   width: 100%;
   background: #202020;
-  color: white;   
-  
+  color: white;    
 }
 
 .container-footer-all{
@@ -40,7 +39,6 @@ footer{
 
 .colum2{
   max-width: 400px;
-  
 }
 
 .colum2 h1{
@@ -48,8 +46,8 @@ footer{
 }
 
 .row{
-  margin-top: 20px;
   display: flex;
+  margin-top: 20px;
 }
 
 .row img{
@@ -97,7 +95,7 @@ footer{
   margin: auto;
   display: flex;
   justify-content: space-between;  
-  padding: 20px;
+  padding: 5px;
 }
 
 .copyright{

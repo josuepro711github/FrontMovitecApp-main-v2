@@ -13,7 +13,7 @@ export class StoreService {
   constructor(
     private tokenService:TokenService
   ) {}
-
+    
   setLog(){
     this.myLog.next(true);
   }

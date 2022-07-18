@@ -30,12 +30,12 @@
 
 .tres{
     background-color: #00BCD8;
-    height: 140px;
+    height: 150px;
 }
 
 .cuatro{
     background-color: #673AB7;
-    height: 140px;
+    height: 150px;
 }
 
 .cuatro >:nth-child(1){

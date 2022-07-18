@@ -7,6 +7,10 @@ header{
     background-size: cover;
 }
 
+.pointer li a{
+    cursor: pointer;
+}
+
 nav{
     height: 100px;
     width: 100%;

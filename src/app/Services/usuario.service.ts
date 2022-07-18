@@ -1,11 +1,16 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHandler, HttpHeaders } from '@angular/common/http';
 import { UsuarioListDto, UsuarioLoginReturn } from '../Models/usuario.model';
+
+import { map, delay, mergeMap, filter } from "rxjs/operators";
+import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
+
+  private headerCustom: HttpHeaders = new HttpHeaders;
 
   constructor(private http:HttpClient) { }
 
@@ -29,4 +34,5 @@ export class UsuarioService {
   getUsuario(){
     return JSON.parse(sessionStorage.getItem("ulg")!);
   }
+  
 }

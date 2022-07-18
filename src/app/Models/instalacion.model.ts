@@ -5,7 +5,14 @@ export interface InstalacionDTO{
         marca:string,
         modelo:string
     },
-	fecha:Date,
+    usuario:{
+        id:number,
+        nombre:string,
+        apellido:string,
+        email:string,
+        documento:string
+    },
+	fecha:any,
 	serie:string,
     direccion:string,
 	empleado:{

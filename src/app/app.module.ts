@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,12 +22,22 @@ import { AdminEquiposComponent } from './Pages/admin-equipos/admin-equipos.compo
 import { AdminCambiaContraComponent } from './Pages/admin-cambia-contra/admin-cambia-contra.component';
 import { MenuClientComponent } from './Components/menu-client/menu-client.component';
 import { ClientInicioComponent } from './Pages/client-inicio/client-inicio.component';
-import { AcercaDeNosotrosComponent } from './pages/acerca-de-nosotros/acerca-de-nosotros.component';
+import { AcercaDeNosotrosComponent } from './Pages/acerca-de-nosotros/acerca-de-nosotros.component';
 import { Headerv2Component } from './Components/headerv2/headerv2.component';
 import { HeaderPrincipalComponent } from './Components/header-principal/header-principal.component';
 import { Contactv2Component } from './Pages/contactv2/contactv2.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { PlanesComponent } from './Pages/planes/planes.component';
+import { AdminUsuariosv2Component } from './Pages/admin-users/admin-usuariosv2/admin-usuariosv2.component';
+import { AdminUsuariosAddComponent } from './Pages/admin-users/admin-usuarios-add/admin-usuarios-add.component';
+import { AdminUsuariosEditComponent } from './Pages/admin-users/admin-usuarios-edit/admin-usuarios-edit.component';
+import { AdminUsuariosInfoComponent } from './Pages/admin-users/admin-usuarios-info/admin-usuarios-info.component';
+import { NgxCaptchaModule, ReCaptchaV3Service } from 'ngx-captcha';
+import { AdminPlanesListComponent } from './Pages/admin-planesv2/admin-planes-list/admin-planes-list.component';
+import { AdminPlanesAddComponent } from './Pages/admin-planesv2/admin-planes-add/admin-planes-add.component';
+import { AdminPlanesEditComponent } from './Pages/admin-planesv2/admin-planes-edit/admin-planes-edit.component';
+
+
 
 @NgModule({
   declarations: [
@@ -54,12 +64,21 @@ import { PlanesComponent } from './Pages/planes/planes.component';
     HomeComponent,
     Contactv2Component,
     PlanesComponent,
+    AdminUsuariosv2Component,
+    AdminUsuariosAddComponent,
+    AdminUsuariosEditComponent,
+    AdminUsuariosInfoComponent,
+    AdminPlanesListComponent,
+    AdminPlanesAddComponent,
+    AdminPlanesEditComponent
   ],
   imports: [
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule, 
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxCaptchaModule,
   ],
   providers: [interceptorProvider],
   bootstrap: [AppComponent]

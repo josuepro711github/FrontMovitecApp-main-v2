@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 import { StoreService } from 'src/app/Services/store.service';
 import { TokenService } from 'src/app/Services/token.service';
@@ -11,8 +11,8 @@ import { UsuarioService } from 'src/app/Services/usuario.service';
 })
 
 export class AppComponent {
-  title = 'MovitecFrontApp';
 
+  title = 'MovitecFrontApp';
   isLogin:boolean = false;
 
   constructor(private tokenService:TokenService, private storeService:StoreService, private usuarioService:UsuarioService) { }

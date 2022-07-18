@@ -22,7 +22,10 @@
                 <td>{{item.estado?"Activo":"Inactivo"}}</td>
                 <td>{{item.tipo}}</td>
                 <td>{{item.documento}}</td>
-                <td class="operation-item"><i (click)="editarModal(i)" class="fa-solid fa-pen"></i><i (click)="deleteUser(item.id)" class="fa-solid fa-circle-minus"></i><i (click)="detailUser(i)" class="fa-solid fa-circle-info"></i></td>
+                <td class="operation-item">
+                    <a (click)="editarModal(i)"><i class="fa-solid fa-pen"></i></a>
+                    <i (click)="deleteUser(item.id)" class="fa-solid fa-circle-minus"></i>
+                    <a (click)="detailUser(i)"><i class="fa-solid fa-circle-info"></i></a></td>
             </tr>
         </tbody>
     </table>

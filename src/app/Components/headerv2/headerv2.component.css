@@ -24,11 +24,11 @@ img {
 }
 
 .nav-menu{
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 0vh;
     top: 8rem;
-    background: rgba(0, 0, 0, 0.7);
+    background: #E5E7EB;
     text-align: center;
     transition: all .5%;   
 }
@@ -53,6 +53,42 @@ img {
     color: dodgerblue;
      transition: .3s;    
  }
+
+ .nav-menu li a{
+    font-size: 20px;
+}
+
+.nav-menu li a:hover{
+    font-size: 24px;
+    color: rgb(15, 89, 163);
+}
+
+#check{
+    display: none;
+}
+
+.bar-btn{
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: rgb(0, 102, 255);
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.bar-btn i{
+    font-size: 50px;
+}
+
+#check:checked ~ .nav-menu{
+    height: 100%;
+   display: initial;
+    
+}
+
+#check:checked ~ .nav-menu li{
+    display: flex;
+    justify-content: center;  
+}
 
 
  /*RESPONSIVE FOR DESKTOP*/
@@ -89,14 +125,6 @@ img {
     }
 }
 
-.nav-menu li a{
-    font-size: 20px;
-}
-
-.nav-menu li a:hover{
-    font-size: 24px;
-    color: rgb(15, 89, 163);
-}
 
 
 
